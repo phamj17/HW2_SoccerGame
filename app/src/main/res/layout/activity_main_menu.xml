@@ -18,21 +18,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Teams"
-                android:id="@+id/textView"
-                android:layout_gravity="center_horizontal"
-                android:textSize="50dp" />
-
-            <Spinner
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/spinner"
-                android:layout_gravity="center_horizontal"
-                android:spinnerMode="dropdown" />
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Team:"
+                    android:id="@+id/teamLabel"
+                    android:textSize="35dp" />
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:id="@+id/name_field"
+                    android:editable="true"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="text" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -49,13 +56,130 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1">
 
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gamesWon_field"
+                    android:editable="true"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Games Won"
+                    android:id="@+id/gamesWon_label"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gamesDrawn_field"
+                    android:editable="true"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Games Drawn"
+                    android:id="@+id/gamesDrawn_label"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ppg_field"
+                    android:editable="true"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Points per Game"
+                    android:id="@+id/ppg_label"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:textSize="25dp" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"></LinearLayout>
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gamesLost_field"
+                    android:editable="true"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Games Lost"
+                    android:id="@+id/gamesLost_label"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fouls_field"
+                    android:editable="true"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Fouls per Game"
+                    android:id="@+id/fpg_label"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:id="@+id/numPlayers_field"
+                    android:editable="true"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Number of Players"
+                    android:id="@+id/numPlayers_label"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
@@ -65,5 +189,49 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:id="@+id/MainRightLayout"></LinearLayout>
+        android:id="@+id/MainRightLayout">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/teams_spinner" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/teamImageView"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD TEAM"
+            android:id="@+id/addTeam_button"
+            android:layout_gravity="center_horizontal"
+            android:textSize="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DELETE TEAM"
+            android:id="@+id/deleteTeam_button"
+            android:layout_gravity="center_horizontal"
+            android:textSize="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Players"
+            android:id="@+id/toPlayerActivity_button"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textSize="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soccer Field"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:textSize="40dp" />
+    </LinearLayout>
 </LinearLayout>
